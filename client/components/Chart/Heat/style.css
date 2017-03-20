@@ -1,0 +1,60 @@
+.heat-map rect{
+	rx: 0;
+	ry: 0;
+}
+
+.heat-map rect.bordered {
+	stroke: #fff;
+	stroke-width:1px;
+	opacity: 0.8;
+}
+
+.heat-map text.mono {
+	font-size: 114x;
+	fill: #444;
+}
+
+.heat-map text.axis-workweek {
+	fill: #000;
+}
+
+.heat-map text.axis-worktime {
+	fill: #000;
+}
+.heat-map .legend  {
+	margin: -56px 0px 0 36px;
+}
+
+.heat-map .legend  ul{
+	margin: 0;
+	padding: 0;
+}
+
+.heat-map .legend  ul li{
+	display: block;
+	float: left;
+	width: 100px;
+}
+
+.heat-map .legend  ul li span{
+	padding: 1px 9px;
+	background: #508d92;
+	margin-right: 13px;
+	border-radius: 10px;
+}
+
+.heat-map .legend  ul li span.one{
+	background: #84ada1;
+}
+
+.heat-map .legend  ul li span.two{
+	background: #437572;
+}
+
+.heat-map .legend  ul li span.three{
+	background: #95bad2;
+}
+
+.heat-map .legend  ul li span.four{
+	background: #508d92;
+}

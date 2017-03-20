@@ -1,0 +1,102 @@
+.ticketrow  {
+	width: 100%;
+    border-bottom: 1px dotted #dadada;
+    height: 30px;
+    opacity: 1;
+    padding: 13px 0 4px;
+    margin: 0;
+}
+
+.ticketrow-header  {
+	background: #eee;
+}
+
+.ticketrow-header span{
+	font-weight: bold;
+
+}
+
+.ticketrow span{
+	padding: 4px ;
+	border-right: 1px dotted #aaa;
+	width: 100px;
+	display: block;
+	float: left;
+}
+.ticketrow span.ticket-drill {
+	border-right: none;
+
+	padding-right: 0;
+	cursor: pointer;
+}
+.ticketrow span.ticket-drill i{
+	color: #345;
+	cursor: pointer;
+}
+.ticketrow span.ticket-drill i:hover {
+	color: #ccc;
+}
+.ticketrow.filtered {
+	display: none;
+}
+.ticketrow.drilled {
+	background: #cfdbdc;
+}
+.ticketrow .fa-minus-circle {
+	display: none;
+}
+.ticketrow .fa-plus-circle {
+	display: block;
+}
+.ticketrow.drilled .fa-minus-circle {
+	display: block;
+}
+.ticketrow.drilled .fa-plus-circle {
+	display: none;
+}
+.ticketrow.filtered span{
+	display: none;
+}
+
+.cell-col {
+	width: 50px;
+}
+.cell-col i {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: 0px auto;
+	border-radius: 4px;
+}
+
+.t-1 .cell-col i {
+	background: #84ada1;
+}
+
+.t-2 .cell-col i {
+	background: #437572;
+}
+
+.t-3 .cell-col i {
+	background: #95bad2;
+}
+
+.t-4 .cell-col i {
+	background: #508d92;
+}
+
+.t-5 .cell-col i {
+	background: #366977;
+}
+
+.t-6 .cell-col i{
+	background: #6a848e;
+}
+
+.t-7 .cell-col i {
+	background: #4a6966;
+}
+
+.t-8 .cell-col i {
+	background: #809e9a;
+}

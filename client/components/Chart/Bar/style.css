@@ -1,0 +1,19 @@
+.bar-chart  .axis {
+
+}
+
+.bar-chart  .axis path.domain {
+	stroke: #ccc;
+    fill: none;
+}
+
+.bar-chart  rect{
+	fill: #647380;
+}
+
+.bar-chart  .axis .tick text {
+	font-size: 11px;
+}
+.bar-chart .y .tick:first-child {
+	display: none;
+}

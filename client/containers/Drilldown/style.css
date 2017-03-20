@@ -1,0 +1,26 @@
+.drilldown {
+	position: absolute;
+	width: 566px;
+	height: 400px;
+	left: 1000px;
+	top: 0;
+}
+.drilldown h1 {
+	color: #737373;
+	padding-bottom: 6px;
+	font-size: 1em;
+	font-weight: normal;
+	border-bottom: 1px solid #c1cfda;
+}
+
+.interpols {
+	margin-top: 27px;
+}
+
+.settings {
+	display: block;
+	position: absolute;
+	right: 0;
+	font-size: 2em;
+	top: 10px;
+}

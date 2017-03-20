@@ -1,0 +1,59 @@
+.stack-chart path.layer {
+	opacity: 0.7;
+}
+
+.stack-chart path.layer-1 {
+	fill: #84ada1;
+}
+
+.stack-chart path.layer-2 {
+	fill: #437572;
+}
+
+.stack-chart path.layer-3 {
+	fill: #95bad2;
+}
+
+.stack-chart path.layer-4 {
+	fill: #508d92;
+}
+
+.stack-chart path.layer-5 {
+	fill: #366977;
+}
+
+.stack-chart path.layer-6 {
+	fill: #6a848e;
+}
+
+.stack-chart path.layer-7 {
+	fill: #4a6966;
+}
+
+.stack-chart path.layer-8 {
+	fill: #809e9a;
+}
+
+.stack-chart path.layer-0 {
+	fill: #eaf;
+}
+.stack-chart .axis path {
+	stroke: #ccc;
+    stroke-width: 1;
+    fill: none;
+}
+.stack-chart .tick {
+	stroke: #b3b3b3;
+}
+.stack-chart .tick text {
+	font-size: 11px;
+	fill: #777;
+	stroke: none;
+}
+
+.stack-chart .y .tick:first-child {
+	display: none;
+}
+.stack-chart {
+	    margin-top: 94px;
+}
