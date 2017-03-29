@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import tickets from './tickets';
+import ticketsState from './tickets';
 
 /**
  * Routing to be implemented
  */
-export default combineReducers({
-  tickets
+
+export const rootReducer = combineReducers({
+    ticketsState
 });

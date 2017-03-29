@@ -24,3 +24,27 @@
 	font-size: 2em;
 	top: 10px;
 }
+.settings i {
+	padding: 0 0 0 16px;
+	cursor: pointer;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+
+}
+.settings i:hover {
+	color:#ddd;
+}
+
+.click-confirm {
+	color: #f904c0;
+}
+.settings i.click-confirm:hover {
+	color:#f904c0;
+}
+/*
+@keyframes rippleCol {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}*/

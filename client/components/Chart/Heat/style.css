@@ -1,6 +1,5 @@
 .heat-map rect{
-	rx: 0;
-	ry: 0;
+	cursor: pointer;
 }
 
 .heat-map rect.bordered {
@@ -57,4 +56,8 @@
 
 .heat-map .legend  ul li span.four{
 	background: #508d92;
+}
+
+.heat-map rect[data-st="hovered"] {
+	fill: #ae0!important;
 }

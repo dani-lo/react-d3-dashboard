@@ -5,7 +5,7 @@
   "description": "Budgeting App Sample - React, Redux, Webpack 2",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --env=devtest --require ignore-styles ./client/test/test_helper.js \"client/test/**/*@(.js|.jsx)\"",
+    "test": "mocha --compilers js:babel-core/register --env=devtest --require ignore-styles ./client/test/lib/test_helper.js \"client/test/**/*@(.js|.jsx)\"",
     "start": "webpack-dev-server --progress --inline --hot",
     "prod": "cross-env NODE_ENV=production webpack-dev-server --env.prod=true",
     "build": "cross-env NODE_ENV=production webpack --env.prod=true",

@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Ticketview from '../../components/ticket';
-import * as AppActions from 'actions';
+import Ticket from '../../components/ticket';
+import * as AppActions from '../../actions';
 import './style.css';
 
 class TicketsHeader extends Component {
@@ -35,30 +35,27 @@ class Tickets extends Component {
 	};
 
 	componentWillMount() {
-		const { tickets, summary, actions } = this.props;
-		actions.requestSum(tickets);
+		const { tickets, actions } = this.props;
 	}
 
 	render() {
 		const {
-			tickets, summary, actions
+			tickets, actions
 		} = this.props;
 
 	    return (
 	      	<div className="tickets">
 				<TicketsHeader />
-	        	{tickets.map( ticket => <Ticketview key={ticket.id} ticket={ticket} actions={actions} /> )}
+	        	{tickets.map( ticket => <Ticket key={ticket.id} ticket={ticket} actions={actions} /> )}
 	      	</div>
 	    );
   }
 }
 
 function mapStateToProps(state) {
-	const { tickets } = state;
-
+	const { ticketsState } = state;
 	return {
-		tickets: tickets.tickets,
-		summary: tickets.summary
+		tickets: ticketsState.tickets
 	};
 }
 

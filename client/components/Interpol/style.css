@@ -5,21 +5,33 @@
 	opacity: 0.25
 }
 .interpol-data{
+	margin-bottom: 0px;
 }
 
 .interpol h2 {
 	font-size: 16px;
-	margin: 12px 0;
+	margin: 12px 0 20px;
 	color: #555;
 	font-weight: bold;
 }
 
 .interpol h3 {
 	font-size: 14px;
-    margin: 30px 0 34px 0;
+    margin: 24px 0 24px 0;
     padding: 4px;
     color: #444;
     font-weight: normal;
     border-bottom: 1px dashed #aab5c1;
     text-align: right;
+}
+.interpol h3 span {
+	position: absolute;
+	left: 0;
+}
+
+.interpol h3 span i {
+	padding: 0 6px 0 0;
+}
+.interpol h3 span i.active {
+	color: #aaa;
 }

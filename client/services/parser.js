@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 
-const stack = d3.layout.stack()
+const stackDataHelper = d3.layout.stack()
     .offset("zero")
     .values(function(d) { return d.values; })
     .x(function(d) { return d.date; })
@@ -33,6 +33,7 @@ export const ticketDataAreasAdapter = (d, metric, flat) => {
 		let metricSeries = ticket.values;
 		let serie = {
 			key: ticketId,
+            drilled: ticket.drilled || false,
 			values: []
 		}
 
@@ -52,7 +53,7 @@ export const ticketDataAreasAdapter = (d, metric, flat) => {
 	 	return set;
 	}
 
-	return	stack(set);
+	return	stackDataHelper(set);
 }
 
 export const ticketSeriesMax = (data) => {

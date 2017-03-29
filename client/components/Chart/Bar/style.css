@@ -2,6 +2,11 @@
 
 }
 
+.bar-chart-container {
+	position: relative;
+	top: 14px;
+}
+
 .bar-chart  .axis path.domain {
 	stroke: #ccc;
     fill: none;
@@ -16,4 +21,31 @@
 }
 .bar-chart .y .tick:first-child {
 	display: none;
+}
+
+.bar-chart rect {
+	cursor: pointer;
+}
+
+.bar-chart rect[data-st="hovered"] {
+	fill: #ae0!important;
+}
+.tooltip-barchart {
+	position: absolute;
+    left: 0;
+    top: -39px;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ddd;
+	background: #f1f1f1;
+    padding: 4px 0;
+    border-radius: 4px;
+	display: none;
+}
+.tooltip-barchart[data-st="hovered"] {
+	display: block;
+}
+.tooltip-barchart span {
+
 }

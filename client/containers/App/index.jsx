@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import Snapshots from 'containers/Snapshots'
 import Tickets from 'containers/Tickets';
 import Drilldown from 'containers/Drilldown';
 import Actionbar from 'components/Actionbar';
@@ -23,6 +24,7 @@ class App extends Component {
 	componentWillMount() {
 		const { tickets, summary, actions, meta } = this.props;
 		actions.requestSum(tickets);
+		//setTimeout(() => {actions.initTickets();}, 3000);
 	}
 
 	render() {
@@ -38,6 +40,9 @@ class App extends Component {
 				<div className="drilldown">
 					<Drilldown {...this.props} />
 				</div>
+				<div className="snapshots-bar">
+					<Snapshots {...this.props} />
+				</div>
 				<div className="viewport">
 	        		<Header />
 					<Actionbar {...this.props} />
@@ -51,12 +56,10 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-	const { tickets } = state;
-
+	const { ticketsState } = state;
 	return {
-		tickets: tickets.tickets,
-		summary: tickets.summary,
-		meta: tickets.meta
+		tickets: ticketsState.tickets,
+		meta: ticketsState.meta
 	};
 }
 

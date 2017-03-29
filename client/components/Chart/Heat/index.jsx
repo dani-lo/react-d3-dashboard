@@ -8,7 +8,7 @@ import './style.css';
 var chartData = [];
 var svg;
 
-const margin = { top: 35, right: 0, bottom: 0, left: 35 };
+const margin = { top: 20, right: 0, bottom: 0, left: 28 };
 const width = 560 - margin.left - margin.right;
 const height = 350 - margin.top - margin.bottom;
 const gridSize = Math.floor(width / 4);
@@ -44,7 +44,7 @@ const createLabels = () => {
 		})
 		.attr("x", 0)
 		.attr("y", function (d, i) {
-			return i * gridSize;
+			return ((i - 1) * (gridSize / 2)) + 18 ;
 		})
 		.style("text-anchor", "end")
 		.attr("transform", "translate(-6," + gridSize / 1.5 + ")")
@@ -72,7 +72,8 @@ const plot = (data) => {
 		})])
 		.range(colors);
 
-	var cards = svg.selectAll(".hour")
+	var cards =
+		svg.selectAll(".hour")
 		.data(data, function(d) {
 			return d.day + ':' + d.hour;
 		});
@@ -81,6 +82,8 @@ const plot = (data) => {
 
 	cards.enter()
 		.append("rect")
+		.on("mouseover", p.pHandleMouseOver)
+		.on("mouseout", p.pHandleMouseOut)
 		.attr("x", function(d) { return (d.hour - 1) * gridSize; })
 		.attr("y", function(d) { return (d.day - 1) * gridSize / 2; })
 		.attr("class", "hour bordered")
@@ -90,9 +93,6 @@ const plot = (data) => {
 
 	cards.transition(t)
 		.style("fill", function(d) {
-			console.log(d.value);
-			console.log(colorScale(d.value));
-			//return '#f0a';
 			return colorScale(d.value);
 		});
 
@@ -139,12 +139,12 @@ export default class HeatChart extends Component {
 
 	render() {
 		return <div className="heat-map">
-				<div className={"heat-id-" + this.props.ticket.id}></div>;
+					<div className={"heat-id-" + this.props.ticket.id}></div>;
 					<div className="legend">
 						<ul>
-							<li><span className="one"></span> good</li>
-							<li><span className="two"></span> fine</li>
-							<li><span className="three"></span> soso</li>
+							<li><span className="three"></span> good</li>
+							<li><span className="one"></span> fine</li>
+							<li><span className="two"></span> so and so</li>
 							<li><span className="four"></span> bad</li>
 						</ul>
 					</div>

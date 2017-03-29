@@ -7,10 +7,9 @@ const getTicketClassname = (ticket) => {
 	return filteredStr + drilledStr;
 }
 
-export default class Ticketview extends Component {
+export default class Ticket extends Component {
 	render () {
 		const { ticket, actions } = this.props;
-
 		return  <p className={getTicketClassname(ticket)}>
 					<span className="ticket-cell cell-col"><i></i></span>
 					<span className="ticket-cell">{ticket.id}</span>

@@ -52,6 +52,12 @@ export const pyAxis = (y) =>
 	    .scale(y)
 	    .orient('right');
 
+const pStack = d3.layout.stack()
+    .offset("zero")
+    .values(function(d) { return d.values; })
+    .x(function(d) { return d.date; })
+    .y(function(d) { return d.value; });
+
 export const pStackPlot = (x, y) =>
 	d3.svg.area()
 	    .interpolate("cardinal")
@@ -65,3 +71,33 @@ export const pBarPlot = (x, y) =>
 export const pTransp = () =>
 	d3.scale.linear()
 		.range([0.4, 0.8]);
+
+export function pHandleMouseOver(d, i) {
+	d3.select(this).attr({
+	  'data-st': "hovered"
+	});
+}
+
+export function pHandleMouseOut(d, i) {
+	d3.select(this).attr({
+	  'data-st': "unhovered"
+	});
+}
+
+export const pParseTooltipPoint = (pathData, xval, xFunc, yFunc) => {
+	for (let i = 0; i < pathData.length; i++) {
+		if (compareDates(pathData[i].date, xval)) {
+			return {
+				xt: parseInt(xFunc(pathData[i].date)),
+				yt: parseInt(yFunc(pathData[i].y + pathData[i].y0)),
+				xv: ('' + pathData[i].date).substring(0, 10),
+				yv: pathData[i].value
+			};
+		}
+	}
+	return null;
+}
+
+const compareDates = (a, b) => {
+	return ('' + a).substring(0, 12) === ('' + b).substring(0, 12);
+};

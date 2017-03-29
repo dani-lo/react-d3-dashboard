@@ -1,6 +1,23 @@
 export const defaultMeta = {
-	"metric": "m1"
+	"metric": "m1",
+	"snapshots": [],
+	"appsect": {
+		"snapshots": 0
+	}
 };
+export const emptyTickets = [
+	{
+		"id": 1,
+		"name": "A",
+		"symbol": "SD3456",
+		"description": "Lorem ipso dolor sit amet etim",
+		"m1": 88,
+		"m2": 3,
+		"m3": 11,
+		"interpol": {},
+		"values": []
+	}
+];
 
 export const defaultTickets = [
 	{
