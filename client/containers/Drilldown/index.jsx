@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Interpolview from '../../components/interpol';
-import * as AppActions from 'actions';
+import Interpolview from '../../components/Interpol';
+import * as AppActions from '../../actions';
 import './style.css';
 
 class Drilldown extends Component {

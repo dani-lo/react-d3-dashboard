@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as AppActions from 'actions';
+import * as AppActions from '../../actions';
 import './style.css';
 
 class Snapshots extends Component {

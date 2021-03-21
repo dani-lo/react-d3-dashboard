@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Ticket from '../../components/ticket';
+import Ticket from '../../components/Ticket';
 import * as AppActions from '../../actions';
 import './style.css';
 

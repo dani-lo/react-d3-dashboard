@@ -1,8 +1,8 @@
 .metric-selector {
-	height: 137px;
-    margin-top: -31px;
-    width: 977px;
-    margin: -30px auto -8px;
+    display: flex;
+    height: 100px;
+    margin: 0 0 2em;
+    justify-content: space-between;
 }
 .metric-sel i {
     color: #4e4e4e;
@@ -17,6 +17,7 @@
     margin: 15px 15px 0 7px;
     float: left;
     cursor: pointer;
+    width: 30%;
 }
 .metric-sel:hover {
 	background: #d2dde4;

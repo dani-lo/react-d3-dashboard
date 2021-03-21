@@ -9,7 +9,7 @@ var chartData = [];
 var svg;
 
 const margin 		= {top: 0, right: 0, bottom: 30, left: 0};
-const width 		= 540 - margin.left - margin.right;
+const width 		= 400 - margin.left - margin.right;
 const height 		= 330 - margin.top - margin.bottom;
 const t 			= p.pTrans(750);
 const x 			= p.pxLinearBand(width);

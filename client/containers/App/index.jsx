@@ -2,15 +2,15 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Snapshots from 'containers/Snapshots'
-import Tickets from 'containers/Tickets';
-import Drilldown from 'containers/Drilldown';
-import Actionbar from 'components/Actionbar';
-import Header from 'components/Header';
-import MetricSelector from 'components/MetricSelector'
-import StackChart from 'components/Chart/Stack';
+import Snapshots from '../../containers/Snapshots'
+import Tickets from '../../containers/Tickets';
+import Drilldown from '../../containers/Drilldown';
+import Actionbar from '../../components/ActionBar';
+import Header from '../../components/Header';
+import MetricSelector from '../../components/MetricSelector'
+import StackChart from '../../components/Chart/Stack';
 
-import * as AppActions from 'actions';
+import * as AppActions from '../../actions';
 import './style.css';
 
 class App extends Component {
@@ -37,11 +37,9 @@ class App extends Component {
 
 	    return (
 			<div className="appview">
+				<Snapshots {...this.props} />
 				<div className="drilldown">
 					<Drilldown {...this.props} />
-				</div>
-				<div className="snapshots-bar">
-					<Snapshots {...this.props} />
 				</div>
 				<div className="viewport">
 	        		<Header />

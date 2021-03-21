@@ -9,7 +9,7 @@ var chartData = [];
 var svg;
 
 const margin = { top: 20, right: 0, bottom: 0, left: 28 };
-const width = 560 - margin.left - margin.right;
+const width = 400 - margin.left - margin.right;
 const height = 350 - margin.top - margin.bottom;
 const gridSize = Math.floor(width / 4);
 const legendElementWidth = gridSize * 2;
@@ -144,7 +144,6 @@ export default class HeatChart extends Component {
 						<ul>
 							<li><span className="three"></span> good</li>
 							<li><span className="one"></span> fine</li>
-							<li><span className="two"></span> so and so</li>
 							<li><span className="four"></span> bad</li>
 						</ul>
 					</div>
