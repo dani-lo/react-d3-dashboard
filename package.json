@@ -27,7 +27,7 @@
     "file-loader": "0.10.1",
     "ignore-styles": "^5.0.1",
     "jest": "^19.0.2",
-    "jsdom": "2.0.0",
+    "jsdom": "16.5.0",
     "style-loader": "0.13.2",
     "webpack": "2.2.1",
     "webpack-dev-server": "2.4.1"
